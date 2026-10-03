@@ -1,0 +1,109 @@
+.glasses-app {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header-bar {
+  background-color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 2px;
+}
+
+.header-bar .title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+/* Khối hiển thị người mẫu */
+.model-card {
+  width: 260px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  background-color: #ffffff;
+}
+
+.model-img {
+  width: 100%;
+  display: block;
+}
+
+/* Định vị mắt kính đè lên mặt người mẫu */
+.glasses-overlay {
+  position: absolute;
+  top: 78px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 145px;
+  opacity: 0.88;
+  pointer-events: none;
+  z-index: 2;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Bảng thông tin kính */
+.glasses-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(254, 165, 105, 0.85);
+  padding: 10px 12px;
+  text-align: left;
+  z-index: 3;
+}
+
+.glasses-name {
+  color: #4338ca;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.glasses-desc {
+  color: #ffffff;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Danh sách chọn kính */
+.glasses-list-container {
+  max-width: 900px;
+}
+
+.glass-item-btn {
+  border: 1px solid #dee2e6;
+  background-color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.glass-item-btn:hover {
+  transform: translateY(-2px);
+  border-color: #4338ca;
+  box-shadow: 0 4px 10px rgba(67, 56, 202, 0.25);
+}
+
+.glass-item-btn.active {
+  border-color: #4338ca;
+  border-width: 2px;
+  box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.2);
+}
+
+.glass-item-btn img {
+  max-height: 42px;
+  object-fit: contain;
+}

@@ -1,0 +1,180 @@
+/* Container bao bọc toàn bộ ứng dụng */
+.glasses-app-wrapper {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Lớp phủ nền tối trong suốt */
+.glasses-overlay-bg {
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header bar */
+.glasses-header {
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 18px 0;
+  text-align: center;
+}
+
+.glasses-header h1 {
+  color: #ffffff;
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Khu vực hiển thị 2 người mẫu so sánh đối chiếu */
+.models-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  margin: 35px auto 25px;
+  flex-wrap: wrap;
+}
+
+/* Khung hình người mẫu */
+.model-box {
+  width: 260px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  background-color: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.model-photo {
+  width: 100%;
+  display: block;
+  user-select: none;
+}
+
+/* Kính đeo thử đè chuẩn xác lên mắt người mẫu */
+.glasses-on-face {
+  position: absolute;
+  top: 78px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 145px;
+  opacity: 0.88;
+  pointer-events: none;
+  z-index: 2;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Lớp phủ thông tin kính ở góc dưới */
+.glasses-info-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(254, 165, 105, 0.85);
+  padding: 10px 14px;
+  text-align: left;
+  z-index: 3;
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+.glasses-info-name {
+  color: #3b42a8;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 3px 0;
+  text-transform: uppercase;
+}
+
+.glasses-info-price {
+  display: inline-block;
+  background-color: #dc3545;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.glasses-info-desc {
+  color: #ffffff;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  margin: 0;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Danh sách chọn kính bên dưới */
+.glasses-picker-box {
+  background-color: #ffffff;
+  max-width: 900px;
+  margin: 25px auto 40px;
+  padding: 25px 30px;
+  border-radius: 6px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.glasses-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .glasses-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .models-container {
+    gap: 30px;
+  }
+}
+
+.glass-item {
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 6px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65px;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.glass-item:hover {
+  transform: translateY(-2px);
+  border-color: #ff5722;
+  box-shadow: 0 4px 12px rgba(255, 87, 34, 0.25);
+}
+
+.glass-item.active {
+  border: 2px solid #ff5722;
+  box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.2);
+}
+
+.glass-item img {
+  max-width: 100%;
+  max-height: 48px;
+  object-fit: contain;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

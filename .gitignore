@@ -1,0 +1,94 @@
+# ==========================================
+# Dependencies (Thư viện tải về - RẤT NẶNG)
+# ==========================================
+node_modules/
+.pnp
+.pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnpm-store/
+
+# ==========================================
+# Production & Build outputs (Sản phẩm đóng gói)
+# ==========================================
+dist/
+dist-ssr/
+build/
+out/
+*.local
+
+# ==========================================
+# Logs & Debug (File nhật ký lỗi)
+# ==========================================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ==========================================
+# Environment & Secrets (Biến môi trường / Mật khẩu)
+# ==========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# ==========================================
+# IDE & Code Editor configs (Cấu hình riêng của trình soạn thảo)
+# ==========================================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+.history/
+.kilo/
+.gemini/
+.agents/
+
+# ==========================================
+# OS generated files (File rác hệ điều hành Windows & Mac)
+# ==========================================
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.stackdump
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# ==========================================
+# Temporary & Cache files (Bộ nhớ đệm & File tạm)
+# ==========================================
+.cache/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+coverage/
+.nyc_output/
+*.tmp
+*.temp
+*.bak
